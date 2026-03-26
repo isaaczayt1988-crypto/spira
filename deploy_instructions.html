@@ -1,0 +1,57 @@
+<style>
+.step{display:flex;gap:16px;margin:0 0 20px;padding:16px;background:var(--color-background-secondary);border-radius:var(--border-radius-lg)}
+.sn{font-family:var(--font-serif);font-size:28px;font-weight:500;color:var(--color-text-info);min-width:32px;line-height:1}
+.sc h3{font-size:14px;font-weight:500;margin:0 0 6px}
+.sc p{font-size:13px;color:var(--color-text-secondary);line-height:1.6;margin:0}
+.opt{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0 0}
+.card{padding:16px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);text-align:center;cursor:pointer;transition:border-color .2s}
+.card:hover{border-color:var(--color-border-info)}
+.card h4{font-size:13px;font-weight:500;margin:0 0 4px}
+.card p{font-size:11px;color:var(--color-text-secondary);margin:0}
+.card .tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;margin-top:8px}
+.free{background:var(--color-background-success);color:var(--color-text-success)}
+.easy{background:var(--color-background-info);color:var(--color-text-info)}
+</style>
+
+<div class="step">
+  <div class="sn">1</div>
+  <div class="sc">
+    <h3>Baixe todos os arquivos daqui</h3>
+    <p>Clique para baixar a landing page e todas as imagens/vídeo que entreguei. Coloque tudo na mesma pasta no seu computador.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="sn">2</div>
+  <div class="sc">
+    <h3>Teste localmente primeiro</h3>
+    <p>Abra o arquivo <strong>landing-page-spira.html</strong> no Chrome. As imagens e o vídeo vão aparecer porque estão na mesma pasta.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="sn">3</div>
+  <div class="sc">
+    <h3>Escolha onde hospedar (opções abaixo)</h3>
+    <p>Arraste a pasta inteira para um dos serviços. Em 2 minutos está no ar com link próprio.</p>
+  </div>
+</div>
+
+<div class="opt">
+  <div class="card" onclick="sendPrompt('Me ensina a hospedar no Netlify passo a passo')">
+    <h4>Netlify</h4>
+    <p>Arrasta a pasta e pronto</p>
+    <span class="tag free">Grátis</span>
+    <span class="tag easy">Mais fácil</span>
+  </div>
+  <div class="card" onclick="sendPrompt('Me ensina a hospedar no Vercel passo a passo')">
+    <h4>Vercel</h4>
+    <p>Deploy instantâneo</p>
+    <span class="tag free">Grátis</span>
+  </div>
+  <div class="card" onclick="sendPrompt('Me ensina a hospedar no GitHub Pages passo a passo')">
+    <h4>GitHub Pages</h4>
+    <p>Domínio customizado</p>
+    <span class="tag free">Grátis</span>
+  </div>
+</div>
